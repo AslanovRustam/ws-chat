@@ -1,7 +1,7 @@
 import React, { useContext, type FC } from "react";
-import s from "./button.module.scss";
 import { IButton } from "../../types/intrfaces";
 import { ThemeContext } from "../../context/ThemeContext";
+import s from "./button.module.scss";
 
 interface ButtonProps {
   name: string;

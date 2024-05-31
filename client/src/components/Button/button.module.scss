@@ -10,23 +10,23 @@
   transition: $transitions;
   cursor: pointer;
 }
-.dark {
+.light {
   color: $primary-white;
   background-color: $primary-black;
-  border-color: $primary-white;
-}
-.light {
-  color: $primary-black;
-  background-color: $primary-white;
   border-color: $primary-black;
 }
-.dark:hover,
-.dark:focus {
-  background-color: $secondary-white;
-  color: $secondary-black;
+.dark {
+  color: $primary-black;
+  background-color: $primary-white;
+  border-color: $primary-white;
 }
 .light:hover,
 .light:focus {
+  background-color: $secondary-white;
+  color: $secondary-black;
+}
+.dark:hover,
+.dark:focus {
   background-color: $secondary-black;
   color: $secondary-white;
 }

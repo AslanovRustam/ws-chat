@@ -1,11 +1,24 @@
 @use "../../styles/variables" as *;
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 0.2em solid $primary-white;
 }
+.light {
+  border-color: $primary-black;
+}
+.dark {
+  border-color: $primary-white;
+}
+
 .themeContainer {
   display: flex;
-  align-items: center;
   gap: 1em;
+  span {
+    font-size: 2em;
+  }
 }
