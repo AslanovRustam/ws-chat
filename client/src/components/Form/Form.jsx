@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 
 function Form({ submitForm, title, placeholder, btnName }) {
   const [value, setValue] = useState("");
@@ -22,7 +23,7 @@ function Form({ submitForm, title, placeholder, btnName }) {
         value={value}
         onChange={handleChange}
       />
-      <button type="submit">{btnName}</button>
+      <Button type="submit" name={btnName} />
     </form>
   );
 }

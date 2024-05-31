@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1vw;
+}
+
+.light {
+  color: $primary-black;
+  background-color: $primary-white;
+  padding: 2em;
+}
+
+.dark {
+  color: $primary-white;
+  background-color: $secondary-black;
+  padding: 2em;
+}

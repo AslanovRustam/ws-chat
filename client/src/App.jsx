@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Chat from "./components/Chat/Chat";
 import Login from "./components/Login/Login";
+import { ThemeContext } from "./context/ThemeContext";
+import "./styles/_main.scss";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const [userName, setUserName] = useState("");
+  const { theme, userName } = useContext(ThemeContext);
+
   return (
-    <>
-      {userName ? (
-        <Chat userName={userName} />
-      ) : (
-        <Login setUserName={setUserName} />
-      )}
-    </>
+    <div className={theme}>
+      <Navbar />
+      {userName ? <Chat /> : <Login />}
+    </div>
   );
 }
 

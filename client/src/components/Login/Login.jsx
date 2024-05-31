@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Form from "../Form/Form";
+import { ThemeContext } from "../../context/ThemeContext";
 
-function Login({ setUserName }) {
+function Login() {
+  const { setUserName } = useContext(ThemeContext);
+
   return (
     <Form
       submitForm={setUserName}
