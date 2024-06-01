@@ -1,6 +1,6 @@
 # WS Chat
 
-![alt text](client\src\images\ws.jpg "jpg")
+![alt text](ws.jpg "jpg")
 
 ## Description
 
