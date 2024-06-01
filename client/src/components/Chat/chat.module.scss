@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.bottomForm {
+  margin-top: 4em;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-radius: 2em;
+  width: fit-content;
+  margin: 2em;
+  padding: 0.5em 1em;
+  border: 0.1em solid;
+  color: $secondary-black;
+}
+.flexStart {
+  align-self: start;
+  background: $secondary-white;
+}
+.flexEnd {
+  align-self: end;
+  background: $olive;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  background-color: $primary-black;
+  color: $primary-white;
+}

@@ -3,6 +3,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import s from "./navbar.module.scss";
 import Button from "../Button/Button";
 import UserBar from "../UserBar/UserBar";
+import Text from "../Text/Text";
 
 interface NavbarProps {}
 
@@ -15,7 +16,7 @@ const Navbar: FC<NavbarProps> = () => {
   return (
     <header className={`${s.header} ${s[theme]}`}>
       <div className={s.themeContainer}>
-        <span>Theme </span>
+        <Text text="Theme" />
         <Button onClick={themeTogle} name={theme} />
       </div>
       {userName && <UserBar />}

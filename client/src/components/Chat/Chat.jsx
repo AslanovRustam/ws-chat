@@ -2,6 +2,7 @@ import { w3cwebsocket as Socket } from "websocket";
 import { useState, useEffect, useContext } from "react";
 import Form from "../Form/Form";
 import { ThemeContext } from "../../context/ThemeContext";
+import s from "./chat.module.scss";
 
 const client = new Socket("ws://localhost:8000");
 
@@ -38,22 +39,26 @@ function Chat() {
   };
 
   return (
-    <div>
-      <div className="messages">
+    <div className={s.container}>
+      <ul className={s.messages}>
         {messages.map((message, key) => (
-          <div
+          <li
             key={key}
-            className={`message ${
-              userName === message.userName ? "flex-end" : "flex-start"
+            className={`${s.message} ${
+              userName === message.userName ? s.flexEnd : s.flexStart
             }`}
           >
-            <section>{message.userName[0].toUpperCase()}</section>
-            <h4>{message.userName + ":"}</h4>
-            <p>{message.message}</p>
-          </div>
+            <div className={s.avatar}>{message.userName[0].toUpperCase()}</div>
+            <p className={s.text}>
+              <strong>{message.userName}:</strong>{" "}
+              <span>{message.message}</span>
+            </p>
+          </li>
         ))}
+      </ul>
+      <div className={s.bottomForm}>
+        <Form submitForm={onSend} placeholder="message" btnName="send" />
       </div>
-      <Form submitForm={onSend} placeholder="message" btnName="send" />
     </div>
   );
 }

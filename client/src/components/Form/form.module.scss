@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+input {
+  width: 100%;
+  font-size: 2em;
+  border: 0.1em solid $primary-black;
+  border-radius: 0.2em;
+  padding: 0.2em;
+}
+input::placeholder {
+  font-style: italic;
+}
